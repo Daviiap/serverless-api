@@ -1,0 +1,14 @@
+service: serverless-http-api
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: sa-east-1
+
+functions:
+  app:
+    handler: src/functions/helloWorld.handler
+    events:
+      - http: GET /
