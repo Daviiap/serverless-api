@@ -8,6 +8,7 @@ provider:
   lambdaHashingVersion: 20201221
   region: sa-east-1
   environment: ${file(environment.${opt:stage, 'dev'}.yml)}
+  memorySize: 124
   iam:
     role:
       statements:
