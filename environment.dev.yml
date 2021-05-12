@@ -1,2 +1,0 @@
-STAGE: dev
-SQS_URL: https://sqs.sa-east-1.amazonaws.com/737295027616/testQueue
