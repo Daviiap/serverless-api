@@ -8,13 +8,13 @@ const sqs = new aws.SQS({ apiVersion: '2012-11-05' });
 module.exports.handle = async (event) => {
   try {
 
-    const { Messages: messages } = await sqs.receiveMessage({
+    const response = await sqs.receiveMessage({
       QueueUrl: SQSUrl
     }).promise();
 
     return {
       statusCode: 200,
-      body: messages[0].Body
+      body: JSON.stringify(response)
     };
   } catch (error) {
     return {
