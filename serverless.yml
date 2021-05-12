@@ -8,6 +8,15 @@ provider:
   lambdaHashingVersion: 20201221
   region: sa-east-1
   environment: ${file(environment.${opt:stage, 'dev'}.yml)}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - SQS:*
+          Resource:
+            - "arn:aws:sqs:sa-east-1:737295027616:testQueue"
 
 functions:
   - ${file(src/endpoints/hello.yml)}
+  - ${file(src/endpoints/sqs.yml)}

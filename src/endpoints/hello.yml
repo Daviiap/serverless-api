@@ -1,4 +1,13 @@
 hello:
   handler: src/functions/hello/hello.handle
   events:
-    - http: GET /
+    - http:
+        path: /
+        method: get
+        cors: true
+    
+    - http:
+        path: /
+        method: post
+        cors: true
+

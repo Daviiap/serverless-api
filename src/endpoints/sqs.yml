@@ -1,0 +1,16 @@
+read:
+  handler: src/functions/sqs/readSQSMessage.handle
+  events:
+    - http:
+        path: /sqs/read
+        method: get
+        cors: true
+
+write:
+  handler: src/functions/sqs/writeSQSMessage.handle
+  events:
+    - http:
+        path: /sqs/write
+        method: post
+        cors: true
+
