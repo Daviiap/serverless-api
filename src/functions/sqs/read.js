@@ -16,6 +16,10 @@ module.exports.handle = async (event) => {
 
     for (const message of messages) {
       message.Body = JSON.parse(message.Body);
+      await sqs.deleteMessage({
+        QueueUrl: SQSUrl,
+        ReceiptHandle: message.ReceiptHandle
+      });
     }
 
     return {
