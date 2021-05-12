@@ -1,21 +1,31 @@
 'use strict';
 
 const aws = require('aws-sdk');
-const SQSUrl = 'https://sqs.sa-east-1.amazonaws.com/737295027616/testQueue';
+const SQSUrl = process.env.SQS_URL;
 
 const sqs = new aws.SQS({ apiVersion: '2012-11-05' });
 
 module.exports.handle = async (event) => {
   try {
 
-    const response = await sqs.receiveMessage({
+    const sqsResponse = await sqs.receiveMessage({
       QueueUrl: SQSUrl
     }).promise();
 
+    const messages = sqsResponse.Messages || [];
+
+    for (const message of messages) {
+      message.Body = JSON.parse(message.Body);
+    }
+
     return {
       statusCode: 200,
-      body: JSON.stringify(response)
+      body: JSON.stringify({
+        numberOfMessages: messages.length,
+        messages
+      })
     };
+
   } catch (error) {
     return {
       statusCode: 500,
