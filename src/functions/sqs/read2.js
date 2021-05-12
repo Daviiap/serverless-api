@@ -23,7 +23,7 @@ module.exports.handle = async (event) => {
         method: 'post',
         url: process.env.TESTING_API_URL,
         data: {
-          reader: 1,
+          reader: 2,
           ReceiptHandle: message.ReceiptHandle
         }
       });

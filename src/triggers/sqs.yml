@@ -3,3 +3,9 @@ read:
   events:
     - sqs: 
         arn: "arn:aws:sqs:sa-east-1:737295027616:testQueue"
+
+read2:
+  handler: src/functions/sqs/read2.handle
+  events:
+    - sqs: 
+        arn: "arn:aws:sqs:sa-east-1:737295027616:testQueue"
