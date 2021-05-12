@@ -173,9 +173,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-http-api/dev/1620824654463-2021-05-12T13:04:14.463Z/serverless-http-api.zip"
+          "S3Key": "serverless/serverless-http-api/dev/1620825688893-2021-05-12T13:21:28.893Z/serverless-http-api.zip"
         },
-        "Handler": "src/functions/hello/hello.handler",
+        "Handler": "src/functions/hello/hello.handle",
         "Runtime": "nodejs12.x",
         "FunctionName": "serverless-http-api-dev-hello",
         "MemorySize": 1024,
@@ -203,9 +203,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-http-api/dev/1620824654463-2021-05-12T13:04:14.463Z/serverless-http-api.zip"
+          "S3Key": "serverless/serverless-http-api/dev/1620825688893-2021-05-12T13:21:28.893Z/serverless-http-api.zip"
         },
-        "Handler": "src/functions/SQSMessage/writeSQSMessage.handler",
+        "Handler": "src/functions/SQSMessage/writeSQSMessage.handle",
         "Runtime": "nodejs12.x",
         "FunctionName": "serverless-http-api-dev-write",
         "MemorySize": 1024,
@@ -233,9 +233,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-http-api/dev/1620824654463-2021-05-12T13:04:14.463Z/serverless-http-api.zip"
+          "S3Key": "serverless/serverless-http-api/dev/1620825688893-2021-05-12T13:21:28.893Z/serverless-http-api.zip"
         },
-        "Handler": "src/functions/SQSMessage/readSQSMessage.handler",
+        "Handler": "src/functions/SQSMessage/readSQSMessage.handle",
         "Runtime": "nodejs12.x",
         "FunctionName": "serverless-http-api-dev-read",
         "MemorySize": 1024,
@@ -256,34 +256,34 @@
         "ReadLogGroup"
       ]
     },
-    "HelloLambdaVersionYINTK818T5vPyXRUZnSh2z52x50Dv8eEn5mBqD55s8": {
+    "HelloLambdaVersionvNSwBFLY6nVmzg9iLyOs4EMHO1X66QXkWxyg8ZF66g": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "sfEE77KbT0Bb9O99u3CfwECF2o2iT+9LHsU8x+CYxVw="
+        "CodeSha256": "htLOtIEanMHP5hEicqTVr10ybmtLDfz6k8QI668k2y4="
       }
     },
-    "WriteLambdaVersionkAeWs9tNiSQZgCvxthccAymTsCOMaF8dXP2a5XuswWo": {
+    "WriteLambdaVersionzpVVcRedVkwifFlr5btfqkjszt9NAkCPYxke4TLk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "WriteLambdaFunction"
         },
-        "CodeSha256": "sfEE77KbT0Bb9O99u3CfwECF2o2iT+9LHsU8x+CYxVw="
+        "CodeSha256": "htLOtIEanMHP5hEicqTVr10ybmtLDfz6k8QI668k2y4="
       }
     },
-    "ReadLambdaVersionx2zgeoUs3jUfC5uEPnE55QAOz5pnhcXjodSltTafEY": {
+    "ReadLambdaVersionQCkb0haRRUfFFpUWmmY88RaIWzXq9GhfLed9ZFJNM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ReadLambdaFunction"
         },
-        "CodeSha256": "sfEE77KbT0Bb9O99u3CfwECF2o2iT+9LHsU8x+CYxVw="
+        "CodeSha256": "htLOtIEanMHP5hEicqTVr10ybmtLDfz6k8QI668k2y4="
       }
     },
     "ApiGatewayRestApi": {
@@ -469,7 +469,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1620824653255": {
+    "ApiGatewayDeployment1620825683340": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -604,19 +604,19 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionYINTK818T5vPyXRUZnSh2z52x50Dv8eEn5mBqD55s8"
+        "Ref": "HelloLambdaVersionvNSwBFLY6nVmzg9iLyOs4EMHO1X66QXkWxyg8ZF66g"
       }
     },
     "WriteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "WriteLambdaVersionkAeWs9tNiSQZgCvxthccAymTsCOMaF8dXP2a5XuswWo"
+        "Ref": "WriteLambdaVersionzpVVcRedVkwifFlr5btfqkjszt9NAkCPYxke4TLk"
       }
     },
     "ReadLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ReadLambdaVersionx2zgeoUs3jUfC5uEPnE55QAOz5pnhcXjodSltTafEY"
+        "Ref": "ReadLambdaVersionQCkb0haRRUfFFpUWmmY88RaIWzXq9GhfLed9ZFJNM"
       }
     },
     "ServiceEndpoint": {
