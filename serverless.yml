@@ -3,7 +3,7 @@ frameworkVersion: "2"
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: dev
   lambdaHashingVersion: 20201221
   region: sa-east-1
@@ -11,4 +11,3 @@ provider:
 
 functions:
   - ${file(src/endpoints/hello.yml)}
-  - ${file(src/endpoints/sqs.yml)}

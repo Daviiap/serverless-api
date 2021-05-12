@@ -1,9 +1,0 @@
-write:
-  handler: src/functions/SQSMessage/writeSQSMessage.handle
-  events: 
-    - http: POST /sqs/write
-
-read:
-  handler: src/functions/SQSMessage/readSQSMessage.handle
-  events: 
-    - http: POST /sqs/read
