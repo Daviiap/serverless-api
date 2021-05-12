@@ -1,11 +1,3 @@
-read:
-  handler: src/functions/sqs/read.handle
-  events:
-    - http:
-        path: /sqs/read
-        method: get
-        cors: true
-
 write:
   handler: src/functions/sqs/write.handle
   events:

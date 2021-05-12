@@ -20,3 +20,4 @@ provider:
 functions:
   - ${file(src/endpoints/hello.yml)}
   - ${file(src/endpoints/sqs.yml)}
+  - ${file(src/triggers/sqs.yml)}
