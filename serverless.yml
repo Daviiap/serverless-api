@@ -7,7 +7,8 @@ provider:
   stage: dev
   lambdaHashingVersion: 20201221
   region: sa-east-1
-  environment: ${file(environment.yml)}
+  environment: ${file(environment.${opt:stage, 'dev'}.yml)}
 
 functions:
   - ${file(src/endpoints/hello.yml)}
+  - ${file(src/endpoints/sqs.yml)}

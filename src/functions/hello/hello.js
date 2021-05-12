@@ -1,4 +1,4 @@
-module.exports.handler = (event) => {
+module.exports.handle = (event) => {
   return JSON.stringify({
     hello: 'world!'
   });

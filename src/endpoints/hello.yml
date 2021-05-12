@@ -1,4 +1,4 @@
 hello:
-  handler: src/functions/hello/hello.handler
+  handler: src/functions/hello/hello.handle
   events:
     - http: GET /
